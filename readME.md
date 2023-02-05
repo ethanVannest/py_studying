@@ -1,0 +1,1 @@
+A quick python script to run through the essentials of computer science
