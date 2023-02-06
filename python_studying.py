@@ -1,7 +1,7 @@
 # IMPORTS
 import random
 
-print('hello world')
+print('Hello World!')
 
 score = 0
 
@@ -32,13 +32,22 @@ questions = {
 }
 answer = input('what are you wanting to study? 1.Computer Science Principles 2. Syntax 3. Make your own study guide. ')
 
-num = random.randint(0,19)
 
-if answer == '1':
-    print('===== Computer Science Principles ======')
+def comp_science_principles(score): 
+    num = random.randint(0,19)
     comp_answer = input(questions['1'][num])
     next_num = num + 1
     if comp_answer == questions['1'][next_num]:
-        score++ 
-        print('Correct', 'Score:',score)
+        print('Correct!', 'Score:',score)
+    else:
+        print('Wrong answer.', 'Final Score:',score)
+        quit()
+    
+
+
+if answer == '1':
+    print('===== Computer Science Principles ======')
+    while score != 20:
+        score = score + 1
+        comp_science_principles(score)
 # print(answer)
