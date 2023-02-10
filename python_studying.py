@@ -51,3 +51,4 @@ if answer == '1':
         score = score + 1
         comp_science_principles(score)
 # print(answer)
+# UPDATES
